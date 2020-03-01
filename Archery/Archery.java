@@ -1,40 +1,41 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**
- * 1421 Archery
+ * Problem 1421: Archery
  * @author Nathan Rice
  */
 public class Archery
 {
   public static void main(String[] args) throws IOException
   {
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    String line;
-    String answer = "";
-    int testCases = Integer.parseInt(br.readLine());
+    File inputFile = new File("input.txt");
+    Scanner in = new Scanner(inputFile);
+
+    int testCases = in.nextInt();
     System.out.println("There are "+testCases+" test cases"); //SELFHELP
     int archerLine;
     int numberOfPapers;
-    String[] thisPaper = new String[3];
+    // String[] thisPaper = new String[3];
     for(int tc = 0; tc < testCases; tc++)
     {
       System.out.println("Test case " + tc + ":"); //SELFHELP
-      archerLine = Integer.parseInt(br.readLine());
+      archerLine = in.nextInt();
       System.out.println("Archer line width is "+archerLine+"."); //SELFHELP
-      numberOfPapers = Integer.parseInt(br.readLine());
+      numberOfPapers = in.nextInt();
       System.out.println("There are "+numberOfPapers+" papers."); //SELFHELP
       int[] d = new int[numberOfPapers];
       int[] l = new int[numberOfPapers];
       int[] r = new int[numberOfPapers];
       for(int paper = 0; paper < numberOfPapers; paper++)
       {
-        line = br.readLine();
-        thisPaper = line.split(" ");
-        d[paper] = Integer.parseInt(thisPaper[0]);
-        l[paper] = Integer.parseInt(thisPaper[1]);
-        r[paper] = Integer.parseInt(thisPaper[2]);
+        // line = br.readLine();
+        // thisPaper = line.split(" ");
+        d[paper] = in.nextInt();
+        l[paper] = in.nextInt();
+        r[paper] = in.nextInt();
       }
 
       // SELFHELP
