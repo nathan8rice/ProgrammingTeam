@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * Problem 1421: Archery
+ * Determine whether a line can intersect all line segments
  * @author Nathan Rice
  */
 public class Archery
