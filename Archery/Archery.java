@@ -9,12 +9,13 @@ import java.util.Scanner;
  */
 public class Archery
 {
-  public static void main(String[] args) throws IOException
+  public static void main(String[] args) throws FileNotFoundException
   {
     File inputFile = new File("input.txt");
     Scanner in = new Scanner(inputFile);
 
     int testCases = in.nextInt();
+    String answer = "";
     System.out.println("There are "+testCases+" test cases"); //SELFHELP
     int archerLine;
     int numberOfPapers;
